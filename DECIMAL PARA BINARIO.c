@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <locale.h>
 
-//PROTOTIPO DA FUNÇÃO
+//PROTOTIPO DA FUNÃ‡ÃƒO
 void dBinario(int numero);
 
-//FUNÇÃO PRINCIPAL
+//FUNÃ‡ÃƒO PRINCIPAL
 int main(){
 	
-	//DEFINIÇÃO DE VARIAVEIS
+	//DEFINIÃ‡ÃƒO DE VARIAVEIS
 	int numero;
 	
 	//MUDANDO O IDIOMA PARA PORTUGUES
@@ -15,30 +15,24 @@ int main(){
 	
 	//DISPLAY
 	printf("=====================================\n");
-	printf("==CONVERSÃO-DE-DECIMAL-PARA-BINARIO==\n\n");
+	printf("==CONVERSÃƒO-DE-DECIMAL-PARA-BINARIO==\n\n");
 	
 	//SOLICITANDO AO USUARIO O VALOR QUE ELE DESEJA CONVERTER
 	printf("INSIRA O VALOR QUE DESEJA CONVERTER: ");
 	scanf("%i", &numero);
 	
-	//CHAMANDO A FUNÇÃO (qBinario)
+	//CHAMANDO A FUNÃ‡ÃƒO (dBinario)
 	dBinario(numero);
 	
 	
 	return 0;
 }
 
-//FUNÇÃO QUE CONVERTE O NUMERO DIGITADO PELO USUARIO PARA BINARIO
+//FUNÃ‡ÃƒO QUE CONVERTE O NUMERO DIGITADO PELO USUARIO PARA BINARIO
 void dBinario(int numero){
 	
-	//DEFINIÇÃO DE VARIAVEIS E VETOR
-	int binario[32];
-	int i = 0;
-	int j;
-	int n2;
-	
-	//N2 RECEBE O MESMO VALOR QUE A VARIAVEL numero
-	n2 = numero;
+	//DEFINIÃ‡ÃƒO DE VARIAVEIS E VETOR
+	int binario[32], i, j;
 	
 	//LOOPING VERIFICAR SE O A DIVISAO DO NUMERO RESTA 0 OU 1 E ARMAZENA EM UM VETOR
 	while(numero > 0){
@@ -48,7 +42,7 @@ void dBinario(int numero){
 	}
 	
 	//LOOPING QUE INVERTE O VALOR DOS VETORES
-	 printf("%i EM BINARIO É: ", n2);
+	 printf("%i EM BINARIO Ã‰: ", n2);
     for(j = i - 1; j >= 0; j--){
         printf("%d", binario[j]);
     }

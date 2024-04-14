@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <locale.h>
 
-//DEFINIÇÃO DE PROTÓTIPO DE FUNÇÕES
+//DEFINIÃ‡ÃƒO DE PROTÃ“TIPO DE FUNÃ‡Ã•ES
 int conversorB(char CHdecimal);
 void qBinario(int Hdecimal);
 
-//FUNÇÃO PRINCIPAL
+//FUNÃ‡ÃƒO PRINCIPAL
 int main(){
 	
-	//DEFINIÇÃO DE VARIAVEIS E VETORES
+	//DEFINIÃ‡ÃƒO DE VARIAVEIS E VETORES
 	int Hdecimal[16], i = 0, j;
 	char CHdecimal[16];
 	
@@ -19,7 +19,8 @@ int main(){
 	printf("CONVERSOR DE HEXADECIMAL PARA BINARIO\n\n");
 	printf("DIGITE UM VALOR HEXADECIMAL: ");
 	gets(CHdecimal);
-	
+
+	//LOOPING QUE CONVERTE OS CARACTERES EM VALORES INTEIROS
 	while(CHdecimal[i] != '\0'){
 		
 		Hdecimal[i] = conversorB(CHdecimal[i]);
@@ -37,7 +38,7 @@ int main(){
 	return(0);	
 }
 
-//FUNÇÃO QUE VERIFICA O DEVIDO VALOR DE CADA CARACTERE
+//FUNÃ‡ÃƒO QUE VERIFICA O DEVIDO VALOR DE CADA CARACTERE
 int conversorB(char CHdecimal){
 	int Hdecimal;
 	
@@ -98,10 +99,10 @@ int conversorB(char CHdecimal){
 	
 }
 
-//FUNÇÃO QUE CONVERTE CADA VALOR DECIMAL PARA BINARIO
+//FUNÃ‡ÃƒO QUE CONVERTE CADA VALOR DECIMAL PARA BINARIO
 void qBinario(Hdecimal){
 		
-	//DEFINIÇÃO DE VARIAVEIS E VETOR
+	//DEFINIÃ‡ÃƒO DE VARIAVEIS E VETOR
 	int binario[4];
 	int i = 0;
 	int j;
@@ -114,7 +115,7 @@ void qBinario(Hdecimal){
 	}
 	
 	
-	//LOOPING QUE INVERTE O VALOR DOS VETORES
+	//COMPLETA COM 0 SE O NUMERO ESTIVER FALTANDO BITS.
 	if(i < 4){
 		printf("0");
 	}
@@ -127,6 +128,7 @@ void qBinario(Hdecimal){
 	if(i < 1){
 		printf("0");
 	}
+    //LOOPING QUE INVERTE O VALOR DOS VETORES
     for(j = i - 1; j >= 0; j--){
         printf("%d", binario[j]);
     }	
